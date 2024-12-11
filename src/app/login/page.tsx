@@ -1,8 +1,8 @@
 "use client"
 import React, { useState } from "react";
-import { TextField, Button, Box, Typography, Link, Dialog, DialogActions, DialogContent, DialogTitle } from "@mui/material";
+import { TextField, Button, Dialog, DialogActions, DialogContent, DialogTitle } from "@mui/material";
 
-const LoginPage = ({handleClose, handleOpen, isOpen} : any) => {
+const LoginPage = ({handleClose, isOpen} : any) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState({ email: "", password: "" });

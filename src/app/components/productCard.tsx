@@ -25,7 +25,7 @@ const ProductCard: React.FC<{ product: ProductType }> = ({ product }) => {
           <ProductTitle productName={product.name} productQuantity={product.quantity} />
           <ProductPrice price={product.price} />
         </CardContent>
-        <AddToCartButton buttonText="Add To Cart" product={product} disabled />
+        <AddToCartButton buttonText="Add To Cart" product={product}/>
       </Card>
     </>
   );

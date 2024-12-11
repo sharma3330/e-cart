@@ -1,6 +1,5 @@
 import React, { ReactNode } from 'react';
 import { Container, Box, Typography } from '@mui/material';
-import { useRouter } from 'next/router';
 import Header from './header';
 
 interface LayoutProps {
@@ -8,8 +7,6 @@ interface LayoutProps {
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
-  const router = useRouter();
-
   return (
     <Box>
       {/* Header */}

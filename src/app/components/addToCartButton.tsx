@@ -2,10 +2,15 @@
 
 import React from "react";
 import { Button } from "@mui/material";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { addToCart } from "../../redux/slices/cartSlice";
 
-function AddToCartButton({ buttonText, product }: any) {
+interface AddToCartButtonProps {
+  buttonText: string;
+  product: any;
+}
+
+function AddToCartButton({ buttonText, product }: AddToCartButtonProps) {
   const dispatch = useDispatch();
   const handleAddToCart = () => {
     dispatch(addToCart(product));
