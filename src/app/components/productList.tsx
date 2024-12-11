@@ -10,7 +10,8 @@ let socket: Socket<DefaultEventsMap, DefaultEventsMap>;
 const ProductList = () => {
   const [products, setProducts] = useState<Array<ProductType>>([]);
   useEffect(() => {
-    socket = io(`${process.env.NEXT_PUBLIC_API}`); // Initialize socket connection
+    console.log(process.env.NEXT_PUBLIC_API);
+    socket = io(`https://e-cart-backend-1-xvh2.onrender.com`); // Initialize socket connection
 
     // Emit the getProducts event to the backend
     socket.emit("getProducts");
